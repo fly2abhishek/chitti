@@ -1,0 +1,154 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  background: #111;
+  background-size: cover;
+  color: #fafafa;
+}
+footer {
+  font-size: 0.75em;
+  color: silver;
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+}
+footer a {
+  color: #f80;
+}
+header {
+  margin: 2em 0;
+  text-align: center;
+}
+h1, h2, h3 {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+h1 {
+  font-weight: 400;
+  font-size: 3em;
+}
+h2 {
+  font-weight: 300;
+  margin-top: 0.5em;
+}
+section {
+  margin: 1.5em auto;
+  width: 430px;
+}
+button {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(180deg, #5c3067 0%, #5c3067 80%, #5c3067 100%);
+  box-shadow: 2px 5px 30px rgba(45, 19, 19, .4);
+  will-change: transform, filter;
+  transition: all 0.3s ease-out;
+}
+button .fa {
+  margin: 0;
+  text-shadow: 1px 2px 2px #5c3067;
+  font-size: 35px;
+}
+button:hover {
+  transform: scale(.92);
+}
+button:active {
+  filter: brightness(.8);
+}
+button:focus {
+  outline: 0;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 1.3em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 10px;
+}
+.fa-github::before {
+  content: "\f09b";
+}
+.button-speech {
+  margin-top: 15px;
+  /* float: left; */
+  /* margin-right: 5px; */
+  height: 80px;
+  width: 80px;
+  margin: 10px auto;
+}
+.inputtext {
+  float: left;
+  margin-right: 5px;
+  height: 30px;
+  width: 330px;
+}
+.button-text {
+  float: left;
+}
+.spinner {
+  display: none;
+  text-align: center;
+}
+.spinner img {
+  margin: 10px auto;
+  width: 80px;
+}
+.chatbox {
+  min-height: 200px;
+  margin-bottom: 0px;
+  padding: 10px 20px;
+}
+.output-you {
+  text-align: right;
+}
+.news {
+  padding: 10px;
+  background: #222;
+  border: 1px solid #666;
+}
+
+.weather {
+  background: #666;
+  padding: 15px;
+}
+.weather .location h1 {
+  text-align: left;
+  font-size: 36px;
+}
+
+.weather p {
+  margin: 0px;
+  margin-bottom: 2px;
+}
+.weather .temprature {
+  width: 45%;
+  float: left;
+}
+.weather .temprature .icon {
+  float: left;
+  font-size: 36px;
+  height: 64px;
+  line-height: 64px;
+}
+.weather .temprature .temp {
+  line-height: 64px;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
