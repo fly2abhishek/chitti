@@ -2,18 +2,31 @@
   "name": "Chitty",
   "version": "1.0.0",
   "description": "Simple AI Chat Bot Demo with Web Speech API",
-  "main": "app.js",
-  "scripts": {
-    "start": "nf start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "server.js",
   "author": "Abhishek Anand",
   "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js",
+    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "apiai": "^4.0.2",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
+    "react": "^16.2.0",
     "request": "^2.83.0",
+    "restify": "^6.3.4",
     "socketio": "^1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "3.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0"
   }
 }

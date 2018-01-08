@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static(__dirname + '/views')); // html
 app.use(express.static(__dirname + '/public')); // js, css, images
 
-var server = app.listen(process.env.PORT || 5000, function () {
+var server = app.listen(process.env.PORT || 3001, function () {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
 
@@ -20,13 +20,13 @@ io.on('connection', function (socket) {
 
 var apiai = require('apiai')(APIAI_TOKEN);
 var request = require('request');
-var weather = require('./weather');
-var news = require('./news');
+var weather = require('./modules/weather');
+var news = require('./modules/news');
 
-// Web UI
-app.get('/', function (req, res) {
-  res.sendFile('index.html');
-});
+// // Web UI
+// app.get('/', function (req, res) {
+//   res.sendFile('index.html');
+// });
 
 io.on('connection', function (socket) {
   socket.on('chat message', function (text) {

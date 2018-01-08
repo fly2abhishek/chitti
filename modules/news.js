@@ -24,7 +24,7 @@ module.exports = {
         responce.markup += res;
       }
       if (articles.length > 0) responce.markup += '</ul></div>';
-     // console.log(JSON.stringify(responce));
+      // console.log(JSON.stringify(responce));
       socket.emit('bot reply', JSON.stringify(responce));
     });
   }
